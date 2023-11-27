@@ -1,15 +1,13 @@
-const colors = ["green", "red", "rgba(133,122,200", "#f15025"];
+const colors = [ "green", "red", "#FF5733", "#581845" ];
 const btn = document.getElementById('btn');
 const color = document.querySelector('.color');
 
-
-// Change de background color when i'm click on the buttom 
 btn.addEventListener('click', e => {
-    // get random number between 0 - 3;
-    const randomNumber = getRandomNumber();
-    console.log(randomNumber);
-    document.body.style.backgroundColor = colors[randomNumber];
-    color.textContent = colors[randomNumber];
+    let numRandom = getRandomNumber();
+    console.log(numRandom);
+
+    document.body.style.backgroundColor = colors[numRandom];
+    color.textContent = colors[numRandom];
 })
 
 function getRandomNumber() {
